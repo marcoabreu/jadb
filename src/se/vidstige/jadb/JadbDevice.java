@@ -24,7 +24,7 @@ public class JadbDevice {
         this.transportFactory = tFactory;
     }
 
-    private Transport getTransport() throws IOException, JadbException {
+    public Transport getTransport() throws IOException, JadbException {
         Transport transport = transportFactory.createTransport();
         if (serial == null) {
             transport.send("host:transport-any");
